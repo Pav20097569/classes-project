@@ -9,13 +9,12 @@
         persons.add(Person("Sheila", "Flynn"))
 
 
-            for ((index, value) in persons.withIndex())
-                println("$index: $value")
-        }
-
-
-
-    fun personInfo(){
+        println("\nSorting by last name, last name uppercased:")
+        persons
+            .sortedBy { it.lastName }
+            .forEach { println("Person: ${it.firstName}, ${it.lastName.uppercase()}") }
+    }
+        fun personInfo(){
         val person1 = Person("Mark", "Roche")
         val person2 = person1.copy(firstName = "Clare")
         val person3 = person1.copy()
